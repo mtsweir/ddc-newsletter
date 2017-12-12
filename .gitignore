@@ -52,10 +52,10 @@ sublime-gulp.log
 
 # Ignore any build folders
 dist
-npm-debug.log
 node_modules
 bower_components
 
-# Ignore
+# Ignore specific files
+npm-debug.log
 .awspublish*
 config.json
