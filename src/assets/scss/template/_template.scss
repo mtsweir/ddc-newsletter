@@ -1,41 +1,292 @@
-// These are the styles to make some of the templates look extra nice.
-// Feel free to remove these styles for production!
+// Typography
+// ==========================================================================
 
-// Body Styles 
 body,
 html, 
 .body {
-  background: #f3f3f3 !important;
+  background: $body-background !important;
+  -webkit-font-smoothing: antialiased;
 }
 
-.container.header {
-  background: #f3f3f3;
+// Links
+
+a {
+  font-weight: $global-font-weight-bold;
 }
 
-.body-drip {
-  border-top: 8px solid #663399;
+// Headers
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: $header-line-height;
 }
 
-// Full Width Headers
-.header {
-  background: #8a8a8a;
+h1, h2 {
+  margin-top: 35px;
 }
+
+.header-trim {
+  margin-bottom: 4px !important;
+}
+
+.header-label {
+  font-size: $text-small;
+  letter-spacing: 0.5px;
+}
+
+// Paragraphs
+
+.sub-header {
+  margin-bottom: 16px !important;
+  line-height: 1.4;
+}
+
+.no-space {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+// Lists
+
+li {
+  margin-bottom: 12px;
+}
+
+.list-unstyled {
+  margin: 0 !important;
+  padding-left: 0 !important;
+  list-style-type: none !important;
+  li {
+    margin-left: 0 !important; // reset for Gmail client
+  }
+}
+
+.list-pull-left {
+  padding-left: 20px !important;
+  li {
+    margin-left: 0 !important; // reset for Gmail client
+  }
+}
+
+.list-featured {
+  a {
+    font-size: 18px;
+  }
+  p {
+    margin-bottom: 0;
+    line-height: 1.4;
+  }
+}
+
+.list-secondary {
+  a {
+    font-weight: $global-font-weight !important;
+    text-decoration: underline;
+  }
+}
+
+// Text utilities
+
+.text-small {
+  font-size: $text-small;
+}
+
+.text-medium {
+  font-size: $text-medium;
+}
+
+.text-muted {
+  color: $shade-3;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.text-nowrap {
+  white-space: nowrap !important;
+}
+
+// Dividers
+
+hr {
+  clear: both;
+  height: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid $shade-4;
+  border-left: 0;
+}
+
+// Buttons
+
+.btn-offset {
+  margin-top: 30px !important;
+  margin-bottom: 20px !important;
+}
+
+// Website Logos
+// ==========================================================================
+
+.logo-ddc {
+  height: 44px !important;
+}
+
+.logo-fda {
+  height: 50px !important;
+}
+
+// Header
+// ==========================================================================
 
 .header .columns {
   padding-bottom: 0;
 }
 
 .header p {
-  color: #fff;
-  padding-top: 15px;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-.header .wrapper-inner {
-  padding: 20px;
+// Secondary
+
+.header-secondary {
+  background: $white;
 }
 
-.header .container {
+.header-secondary .wrapper-inner {
+  padding: 10px;
+}
+
+.header-secondary p {
+  margin: 0 !important;
+  padding: 0 !important;
+  color: $shade-3;
+  font-size: $text-tiny;
+}
+
+.header-secondary a {
+  font-weight: $global-font-weight !important;
+}
+
+// Primary
+
+
+.header-primary {
+  background: $light-gray;
+}
+
+.header-primary .wrapper-inner {
+  padding: 20px 20px 20px;
+}
+
+.header-primary .container {
   background: transparent;
+}
+
+.header-title {
+  font-size: 16px;
+  font-weight: $global-font-weight-bold;
+}
+
+.header-sub-title {
+  font-size: 14px;
+}
+
+// Footer
+// ==========================================================================
+
+.footer {
+  background: $light-gray;
+}
+
+.footer .container {
+  background: transparent;
+}
+
+.btn-app-store {
+  height: 40px !important;
+}
+
+.footer-nav {
+  a {
+    font-size: $text-small;
+    font-weight: $global-font-weight !important;
+  }
+}
+
+
+// Table Sections
+// ==========================================================================
+
+.row-trim {
+  .columns {
+    padding-bottom: 0 !important;
+  }
+}
+
+// Section Header:
+// Adds a 8px top border to the <row> wrapper.
+// Can be branded based on use case, e.g FDA.
+
+.section-header-fda {
+  border-top: 8px solid $fda-primary;
+}
+
+// Section Spacer:
+// Use when you need a spacer between table sections, background colour uses
+// the same global background shade.
+.section-spacer {
+  background: $body-background;
+}
+
+
+// Sponsored
+// ==========================================================================
+
+.sponsored .callout {
+  margin-bottom: 0 !important;
+}
+
+.sponsored .columns {
+  padding-bottom: 0 !important;
+}
+
+.callout-inner {
+  border: 0 !important;
+}
+
+
+// Responsive
+// ==========================================================================
+
+@media only screen and (max-width: #{$global-breakpoint}) {
+  
+  // reduce column padding for small devices
+  table.body .columns {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .logo-ddc {
+    margin-bottom: 10px !important;
+  }
+
+  .header-title,
+  .header-sub-title {
+    font-size: 14px;
+  }
+
+}
+
+
+// What is this?
+
+.wrapper.secondary {
+  background: #f3f3f3;
+}
+
+.body-drip {
+  border-top: 8px solid #663399;
 }
 
 // Social Media
@@ -52,8 +303,4 @@ table.button.twitter table td {
 table.button.google table td {
   background: #DB4A39 !important;
   border-color: #DB4A39;
-}
-
-.wrapper.secondary {
-  background: #f3f3f3;
 }
