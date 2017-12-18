@@ -117,23 +117,6 @@ hr {
   border-left: 0;
 }
 
-// Buttons
-
-.btn-offset {
-  margin-top: 30px !important;
-  margin-bottom: 20px !important;
-}
-
-// Website Logos
-// ==========================================================================
-
-.logo-ddc {
-  height: 44px !important;
-}
-
-.logo-fda {
-  height: 50px !important;
-}
 
 // Header
 // ==========================================================================
@@ -147,7 +130,7 @@ hr {
   padding: 0 !important;
 }
 
-// Secondary
+// Header - Secondary
 
 .header-secondary {
   background: $white;
@@ -168,8 +151,7 @@ hr {
   font-weight: $global-font-weight !important;
 }
 
-// Primary
-
+// Header - Primary
 
 .header-primary {
   background: $light-gray;
@@ -191,6 +173,7 @@ hr {
 .header-sub-title {
   font-size: 14px;
 }
+
 
 // Footer
 // ==========================================================================
@@ -215,33 +198,42 @@ hr {
 }
 
 
-// Table Sections
+// Table Rows & Sections
 // ==========================================================================
 
-.row-trim {
+// Row Spacer
+// Use when you need a visible spacer between table sections, background
+// colour uses the same global background shade. Vertical height space
+// inherits $global-padding.
+
+.row-spacer {
+  margin: 0 !important;
+  background: $body-background;
+}
+
+// Row column reset
+// Removes bottom column padding, this would be used for cases where you
+// don't want bottom padding between two elements. e.g H2 and <ul>.
+
+.row-trim-columns {
   .columns {
     padding-bottom: 0 !important;
   }
 }
 
-// Section Header:
-// Adds a 8px top border to the <row> wrapper.
-// Can be branded based on use case, e.g FDA.
 
-.section-header-fda {
-  border-top: 8px solid $fda-primary;
-}
-
-// Section Spacer:
-// Use when you need a spacer between table sections, background colour uses
-// the same global background shade.
-.section-spacer {
-  background: $body-background;
-}
-
-
-// Sponsored
+// Components
 // ==========================================================================
+
+// Buttons
+// Use .btn-offset to add top margin space.
+
+.btn-offset {
+  margin-top: 30px !important;
+}
+
+// Callout
+// Sponsored callout uses .primary which is branded with 20% of ddc-blue.
 
 .sponsored .callout {
   margin-bottom: 0 !important;
@@ -253,6 +245,27 @@ hr {
 
 .callout-inner {
   border: 0 !important;
+}
+
+
+// Vendor
+// ==========================================================================
+
+// Website Logos
+
+.logo-ddc {
+  height: 44px !important;
+}
+
+.logo-fda {
+  height: 50px !important;
+}
+
+// FDA
+// Adds a 8px top border to the <row> wrapper.
+
+.row-fda {
+  border-top: 8px solid $fda-primary;
 }
 
 
@@ -287,20 +300,4 @@ hr {
 
 .body-drip {
   border-top: 8px solid #663399;
-}
-
-// Social Media
-table.button.facebook table td {
-  background: #3B5998 !important;
-  border-color: #3B5998;
-}
-
-table.button.twitter table td {
-  background: #1daced !important;
-  border-color: #1daced;
-}
-
-table.button.google table td {
-  background: #DB4A39 !important;
-  border-color: #DB4A39;
 }
