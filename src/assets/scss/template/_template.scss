@@ -222,6 +222,23 @@ hr {
   }
 }
 
+// Row dual column reset
+// Removes padding on specific columns, applies to large screens only
+// as mobile definitions will reset these values, which is fine.
+
+.row-slideshow {
+  .first {
+    padding-right: 20px;
+  }
+  .last {
+    padding-left: 0;
+  }
+  // fix for height not working
+  img {
+    height: auto !important;
+  }
+}
+
 
 // Components
 // ==========================================================================
@@ -246,6 +263,11 @@ hr {
 
 .callout-inner {
   border: 0 !important;
+}
+
+.sponsored ul {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 
