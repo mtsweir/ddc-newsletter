@@ -5,24 +5,40 @@ body,
 html, 
 .body {
   background: $body-background !important;
+  -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
+}
+
+// Set font weight for consistency
+
+strong {
+  font-weight: $global-font-weight-bold;
 }
 
 // Links
 
 a {
   font-weight: $global-font-weight-bold;
-  -webkit-font-smoothing: antialiased;
 }
 
-// Headers
+.link-grey {
+  color: $global-font-color;
+  &:hover {
+    color: $shade-1;
+  }
+}
+
+// Headings
+// ==========================================================================
 
 h1, h2, h3, h4, h5, h6 {
   line-height: $header-line-height;
 }
 
-h1, h2 {
-  margin-top: 35px;
+h2 {
+  // Prevent default hyphens
+  -webkit-hyphens: none;
+  hyphens: none;
 }
 
 .header-trim {
@@ -34,39 +50,50 @@ h1, h2 {
   letter-spacing: 0.5px;
 }
 
-// Paragraphs
-
 .sub-header {
   margin-bottom: 16px !important;
   line-height: 1.4;
 }
 
-.no-space {
-  margin: 0 !important;
-  padding: 0 !important;
-}
 
 // Lists
+// ==========================================================================
+
+ul {
+  padding-left: 28px;
+}
 
 li {
-  margin-bottom: 12px;
+  margin-bottom: 15px;
+
+  p {
+    line-height: 22px;
+  }
 }
+
+// Removes bullet to align with left content edge.
 
 .list-unstyled {
-  margin: 0 !important;
+  margin-left: 0 !important;
   padding-left: 0 !important;
   list-style-type: none !important;
+
   li {
     margin-left: 0 !important; // reset for Gmail client
   }
 }
 
+// Removes left padding to align list content with left content edge.
+
 .list-pull-left {
-  padding-left: 20px !important;
+  padding-left: 0 !important;
+
   li {
     margin-left: 0 !important; // reset for Gmail client
   }
 }
+
+// Style links in large font size.
 
 .list-featured {
   a {
@@ -74,18 +101,24 @@ li {
   }
   p {
     margin-bottom: 0;
-    line-height: 1.4;
+    @extend .text-muted;
   }
 }
+
+// Style links as normal (400) font weight.
 
 .list-secondary {
+
   a {
     font-weight: $global-font-weight !important;
-    text-decoration: underline;
   }
 }
 
-// Text utilities
+
+// Utilities
+// ==========================================================================
+
+// Text styles
 
 .text-small {
   font-size: $text-small;
@@ -107,9 +140,16 @@ li {
   white-space: nowrap !important;
 }
 
+.no-space {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 // Dividers
 
 hr {
+  margin: 0 !important;
+  padding: 0 !important;
   clear: both;
   height: 0;
   border-top: 0;
@@ -119,7 +159,7 @@ hr {
 }
 
 
-// Headers
+// Template Header
 // ==========================================================================
 
 .header .columns {
@@ -176,7 +216,7 @@ hr {
 }
 
 
-// Footer
+// Template Footer
 // ==========================================================================
 
 .footer {
@@ -202,16 +242,6 @@ hr {
 // Rows & Sections
 // ==========================================================================
 
-// Row Spacer
-// Use when you need a visible spacer between table sections, background
-// colour uses the same global background shade. Vertical height space
-// inherits $global-padding.
-
-.row-spacer {
-  margin: 0 !important;
-  background: $body-background;
-}
-
 // Row column reset
 // Removes bottom column padding, this would be used for cases where you
 // don't want bottom padding between two elements. e.g H2 and <ul>.
@@ -226,48 +256,47 @@ hr {
 // Removes padding on specific columns, applies to large screens only
 // as mobile definitions will reset these values, which is fine.
 
-.row-slideshow {
+.row-trim-2-columns {
   .first {
     padding-right: 20px;
   }
   .last {
     padding-left: 0;
   }
-  // fix for height not working
-  img {
-    height: auto !important;
-  }
 }
-
 
 // Components
 // ==========================================================================
 
 // Buttons
-// Use .btn-offset to add top margin space.
+// Use .btn-offset for better margin space between sections.
 
 .btn-offset {
-  margin-top: 30px !important;
+  margin-top: 20px !important;
+  margin-bottom: 5px !important;
 }
 
-// Callout
-// Sponsored callout uses .primary which is branded with 20% of ddc-blue.
+// Callout - sponsored
 
 .sponsored .callout {
   margin-bottom: 0 !important;
 }
 
-.sponsored .columns {
-  padding-bottom: 0 !important;
+.sponsored .callout-inner {
+  padding-bottom: 10px !important;
 }
 
 .callout-inner {
   border: 0 !important;
 }
 
-.sponsored ul {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
+// Slideshow
+
+.slideshow {
+  // fix for height not working
+  img {
+    height: auto !important;
+  }
 }
 
 
@@ -284,11 +313,8 @@ hr {
   height: 50px !important;
 }
 
-// FDA
-// Adds a 8px top border to the <row> wrapper.
-
-.row-fda {
-  border-top: 8px solid $fda-primary;
+.logo-medwatch {
+  width: 160px !important;
 }
 
 
@@ -312,7 +338,23 @@ hr {
     font-size: 14px;
   }
 
+  .list-secondary {
+    list-style: none !important;
+  }
+
 }
+
+@media only screen and (min-width: #{$global-breakpoint}) {
+  
+  // match global padding for large
+  .sponsored .primary {
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+  }
+
+}
+
+
 
 
 // What is this?
@@ -324,3 +366,6 @@ hr {
 .body-drip {
   border-top: 8px solid #663399;
 }
+
+
+
