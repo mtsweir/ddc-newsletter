@@ -167,6 +167,68 @@ hr {
 }
 
 
+// Rows & Sections
+// ==========================================================================
+
+// Row column reset
+// Removes bottom column padding, this would be used for cases where you
+// don't want bottom padding between two elements. e.g H2 and <ul>.
+
+.row-trim-columns {
+  .columns {
+    padding-bottom: 0 !important;
+  }
+}
+
+// Row dual column reset
+// Removes padding on specific columns, applies to large screens only
+// as mobile definitions will reset these values, which is fine.
+
+.row-trim-2-columns {
+  .first {
+    padding-right: 20px;
+  }
+  .last {
+    padding-left: 0;
+  }
+}
+
+
+// Components
+// ==========================================================================
+
+// Buttons
+// Use .btn-offset for better margin space between sections.
+
+.btn-offset {
+  margin-top: 20px !important;
+  margin-bottom: 5px !important;
+}
+
+// Callout - sponsored
+
+.sponsored .callout {
+  margin-bottom: 0 !important;
+}
+
+.sponsored .callout-inner {
+  padding-bottom: 10px !important;
+}
+
+.callout-inner {
+  border: 0 !important;
+}
+
+// Slideshow
+
+.slideshow {
+  // fix for height not working
+  img {
+    height: auto !important;
+  }
+}
+
+
 // Template Header
 // ==========================================================================
 
@@ -243,67 +305,6 @@ hr {
   a {
     font-size: $text-small;
     font-weight: $global-font-weight !important;
-  }
-}
-
-
-// Rows & Sections
-// ==========================================================================
-
-// Row column reset
-// Removes bottom column padding, this would be used for cases where you
-// don't want bottom padding between two elements. e.g H2 and <ul>.
-
-.row-trim-columns {
-  .columns {
-    padding-bottom: 0 !important;
-  }
-}
-
-// Row dual column reset
-// Removes padding on specific columns, applies to large screens only
-// as mobile definitions will reset these values, which is fine.
-
-.row-trim-2-columns {
-  .first {
-    padding-right: 20px;
-  }
-  .last {
-    padding-left: 0;
-  }
-}
-
-// Components
-// ==========================================================================
-
-// Buttons
-// Use .btn-offset for better margin space between sections.
-
-.btn-offset {
-  margin-top: 20px !important;
-  margin-bottom: 5px !important;
-}
-
-// Callout - sponsored
-
-.sponsored .callout {
-  margin-bottom: 0 !important;
-}
-
-.sponsored .callout-inner {
-  padding-bottom: 10px !important;
-}
-
-.callout-inner {
-  border: 0 !important;
-}
-
-// Slideshow
-
-.slideshow {
-  // fix for height not working
-  img {
-    height: auto !important;
   }
 }
 
