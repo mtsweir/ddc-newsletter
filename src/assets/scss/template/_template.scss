@@ -55,10 +55,6 @@ h2 {
   hyphens: none;
 }
 
-.header-trim {
-  margin-bottom: 4px !important;
-}
-
 .header-label {
   font-size: $text-small;
   letter-spacing: 0.5px;
@@ -216,7 +212,7 @@ hr {
 
 .btn-offset {
   margin-top: 20px !important;
-  margin-bottom: 5px !important;
+  margin-bottom: 10px !important;
 }
 
 // Callout - sponsored
@@ -227,6 +223,7 @@ hr {
 
 .sponsored .callout-inner {
   padding-bottom: 10px !important;
+  background: $shade-6 !important;
 }
 
 .callout-inner {
