@@ -114,6 +114,14 @@ li {
   }
 }
 
+// Tools & Resources
+
+.list-resources {
+  ul {
+    margin: 0 !important;
+  }
+}
+
 
 // Utilities
 // ==========================================================================
@@ -339,6 +347,7 @@ hr {
   }
 
   .list-secondary {
+    padding-left: 0 !important;
     list-style: none !important;
   }
 
