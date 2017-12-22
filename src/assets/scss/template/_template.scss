@@ -135,6 +135,19 @@ li {
   }
 }
 
+// Med Reminders
+
+.list-meds {
+  li {
+    margin: 0 0 15px 0 !important;
+    padding-bottom: 15px !important;
+    border-bottom: 1px solid $shade-5;
+    p {
+      margin: 0 !important;
+    }
+  }
+}
+
 
 // 4. Utilities
 // ==========================================================================
@@ -199,10 +212,26 @@ hr {
 
 .row-trim-2-columns {
   .first {
-    padding-right: 20px;
+    padding-right: 20px !important;
   }
   .last {
-    padding-left: 0;
+    padding-left: 0 !important;
+  }
+}
+
+table.body .reminder {
+  .first {
+    padding-right: 0 !important;
+  }
+
+  p {
+    margin-bottom: 0 !important;
+  }
+  
+  img {
+    width: 45px !important;
+    height: auto !important;
+    opacity: 0.2;
   }
 }
 
@@ -392,6 +421,5 @@ hr {
 .body-drip {
   border-top: 8px solid #663399;
 }
-
 
 
