@@ -119,6 +119,9 @@ li {
 
 .list-secondary {
 
+  li {
+    margin-left: 0 !important; // reset for Gmail client
+  }
   a {
     font-weight: $global-font-weight !important;
   }
