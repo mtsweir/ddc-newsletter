@@ -42,6 +42,7 @@ a {
   }
 }
 
+
 // 2. Headings
 // ==========================================================================
 
@@ -57,6 +58,7 @@ h2 {
 
 .header-label {
   font-size: $text-small;
+  font-weight: $global-font-weight-bold;
   letter-spacing: 0.5px;
 }
 
@@ -330,7 +332,6 @@ table.body .reminder {
 .header-sub-title {
   font-size: 14px;
 }
-
 
 // Template Footer
 
