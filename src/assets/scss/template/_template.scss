@@ -137,6 +137,12 @@ li {
 
 // Med Reminders
 
+.reminder {
+  h4 {
+    margin: 0 0 4px 0;
+  }
+}
+
 .list-meds {
   li {
     margin: 0 0 15px 0 !important;
@@ -403,18 +409,3 @@ table.body .reminder {
   }
 
 }
-
-
-
-
-// What is this?
-
-.wrapper.secondary {
-  background: #f3f3f3;
-}
-
-.body-drip {
-  border-top: 8px solid #663399;
-}
-
-
