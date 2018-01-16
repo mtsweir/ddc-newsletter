@@ -59,3 +59,4 @@ bower_components
 npm-debug.log
 .awspublish*
 config.json
+package-lock.json
