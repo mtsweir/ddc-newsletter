@@ -32,7 +32,11 @@ strong {
 // Links
 
 a {
-	font-weight: $global-font-weight-bold;
+	font-weight: $global-font-weight;
+
+	&:hover {
+		color: $shade-1;
+	}
 }
 
 .link-grey {
@@ -63,7 +67,7 @@ h2 {
 }
 
 .sub-header {
-	margin-bottom: 16px !important;
+	margin-bottom: $spacer !important;
 	line-height: 1.4;
 }
 
@@ -72,11 +76,12 @@ h2 {
 // ==========================================================================
 
 ul {
-	padding-left: 28px;
+	padding-left: $spacer;
 }
 
 li {
-	margin-bottom: 15px;
+	margin-left: 0 !important; // reset for Gmail client
+	margin-bottom: $spacer;
 
 	p {
 		line-height: 22px;
@@ -89,20 +94,6 @@ li {
 	margin-left: 0 !important;
 	padding-left: 0 !important;
 	list-style-type: none !important;
-
-	li {
-		margin-left: 0 !important; // reset for Gmail client
-	}
-}
-
-// Removes left padding to align list content with left content edge.
-
-.list-pull-left {
-	padding-left: 0 !important;
-
-	li {
-		margin-left: 0 !important; // reset for Gmail client
-	}
 }
 
 // Style links in large font size.
@@ -120,10 +111,6 @@ li {
 // Style links as normal (400) font weight.
 
 .list-secondary {
-
-	li {
-		margin-left: 0 !important; // reset for Gmail client
-	}
 	a {
 		font-weight: $global-font-weight !important;
 	}
@@ -147,8 +134,8 @@ li {
 
 .list-meds {
 	li {
-		margin: 0 0 15px 0 !important;
-		padding-bottom: 15px !important;
+		margin: 0 0 $spacer 0 !important;
+		padding-bottom: $spacer !important;
 		border-bottom: 1px solid $shade-5;
 		p {
 			margin: 0 !important;
@@ -232,7 +219,7 @@ table.body .reminder {
 	}
 
 	img {
-		width: 45px !important;
+		width: 44px !important;
 		height: auto !important;
 		opacity: 0.2;
 	}
@@ -397,6 +384,12 @@ table.body .reminder {
 	.list-secondary {
 		padding-left: 0 !important;
 		list-style: none !important;
+	}
+	
+	// reduce padding between links
+
+	table.footer-nav th.menu-item {
+		padding: 10px 5px;
 	}
 
 }
