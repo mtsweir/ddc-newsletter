@@ -60,15 +60,19 @@ h2 {
 	hyphens: none;
 }
 
-.header-label {
-	font-size: $text-small;
-	font-weight: $global-font-weight-bold;
-	letter-spacing: 0.5px;
+.header-trim {
+	margin-bottom: $spacer / 4 !important;
 }
 
 .sub-header {
 	margin-bottom: $spacer !important;
 	line-height: 1.4;
+}
+
+.header-label {
+	font-size: $text-small;
+	font-weight: $global-font-weight-bold;
+	letter-spacing: 0.5px;
 }
 
 
@@ -193,19 +197,6 @@ hr {
 .row-trim-columns {
 	.columns {
 		padding-bottom: 0 !important;
-	}
-}
-
-// Row dual column reset
-// Removes padding on specific columns, applies to large screens only
-// as mobile definitions will reset these values, which is fine.
-
-.row-trim-2-columns {
-	.first {
-		padding-right: 20px !important;
-	}
-	.last {
-		padding-left: 0 !important;
 	}
 }
 
@@ -385,8 +376,8 @@ table.body .reminder {
 		padding-left: 0 !important;
 		list-style: none !important;
 	}
-	
-	// reduce padding between links
+
+	// reduce padding between footer nav links
 
 	table.footer-nav th.menu-item {
 		padding: 10px 5px;
@@ -400,6 +391,19 @@ table.body .reminder {
 	.sponsored .primary {
 		padding-left: 50px !important;
 		padding-right: 50px !important;
+	}
+
+	// Row dual column reset
+	// Removes padding on specific columns, applies to large screens only
+	// as mobile definitions will reset these values, which is fine.
+
+	.slideshow {
+		.first {
+			padding-right: 20px !important;
+		}
+		.last {
+			padding-left: 0 !important;
+		}
 	}
 
 }
