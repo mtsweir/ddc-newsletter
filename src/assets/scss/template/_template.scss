@@ -75,6 +75,10 @@ h2 {
 	letter-spacing: 0.5px;
 }
 
+.header-label-social {
+	margin-bottom: 8px;
+}
+
 
 // 3. Lists
 // ==========================================================================
@@ -221,12 +225,31 @@ table.body .reminder {
 // ==========================================================================
 
 // Buttons
+
+// Button control
+
+.btn-control {
+	height: 40px !important;
+}
+
+// Social buttons
+
+.btn-social table td {
+	background: $shade-5 !important;
+
+	a {
+		color: $shade-2 !important;		
+	}
+}
+
+// Offsetting buttons
 // Use .btn-offset for better margin space between sections.
 
 .btn-offset {
-	margin-top: 20px !important;
-	margin-bottom: 10px !important;
+	margin-top: 18px !important;
+	margin-bottom: 12px !important;
 }
+
 
 // Callout - sponsored
 
@@ -242,6 +265,7 @@ table.body .reminder {
 .callout-inner {
 	border: 0 !important;
 }
+
 
 // Slideshow
 
@@ -313,16 +337,9 @@ table.body .reminder {
 
 // Template Footer
 
-.footer {
-	background: $light-gray;
-}
-
+.footer,
 .footer .container {
-	background: transparent;
-}
-
-.btn-app-store {
-	height: 40px !important;
+	background: $light-gray;
 }
 
 .footer-nav {
@@ -330,6 +347,10 @@ table.body .reminder {
 		font-size: $text-small;
 		font-weight: $global-font-weight !important;
 	}
+}
+
+.row-social {
+	background: $white;
 }
 
 
