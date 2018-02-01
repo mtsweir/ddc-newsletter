@@ -1,6 +1,8 @@
 //
 //  Table of Contents:
 //
+
+
 //   1. Typography
 //   2. Headings
 //   3. Lists
@@ -20,7 +22,6 @@ html,
 .body {
 	background: $body-background !important;
 	-webkit-text-size-adjust: 100%;
-	-webkit-font-smoothing: antialiased;
 }
 
 // Set font weight for consistency
@@ -246,8 +247,8 @@ table.body .reminder {
 // Use .btn-offset for better margin space between sections.
 
 .btn-offset {
-	margin-top: 18px !important;
-	margin-bottom: 12px !important;
+	margin-top: 30px !important;
+	margin-bottom: 10px !important;
 }
 
 
