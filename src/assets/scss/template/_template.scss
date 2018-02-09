@@ -156,6 +156,12 @@ li {
 // 4. Utilities
 // ==========================================================================
 
+// Margins
+
+.mb-0 {
+	margin-bottom: 0 !important;
+}
+
 // Text styles
 
 .text-small {
@@ -252,7 +258,7 @@ table.body .reminder {
 }
 
 
-// Callout - sponsored
+// Callout
 
 .sponsored .callout {
 	margin-bottom: 0 !important;
@@ -265,6 +271,13 @@ table.body .reminder {
 
 .callout-inner {
 	border: 0 !important;
+}
+
+// Callout - overrides
+
+th.callout-inner.success {
+	color: $shade-2;
+	background: #DFF5F2 !important;
 }
 
 
