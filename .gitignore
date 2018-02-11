@@ -51,7 +51,6 @@ sublime-gulp.log
 *.map
 
 # Ignore any build folders
-dist
 node_modules
 bower_components
 
