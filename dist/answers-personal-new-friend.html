@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/app.css">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Drugs.com Answers Community - Queue Template</title>
+    <title>Drugs.com Answers Community - New Comment</title>
     <!-- <style> -->
   </head>
   <body>
@@ -42,13 +42,14 @@
             		<th class="small-12 large-12 columns first last"><table><tr><th>
             			<table class="spacer"><tbody><tr><td height="32px" style="font-size:32px;line-height:32px;">&#xA0;</td></tr></tbody></table> 
             			<p>Hi {user.username},</p>
-            			<p class="text-muted">Here's the latest summary of activity for your subscriptions on Drugs.com. This list encompasses the last <b>{interval}</b> preceeding {time}.</p>
+            			<p class="text-muted">You have been added to a friends list:</p>
             			<table class="spacer"><tbody><tr><td height="8px" style="font-size:8px;line-height:8px;">&#xA0;</td></tr></tbody></table> 
             			<table class="callout"><tr><th class="callout-inner success">
-            				<h3>{post.title}</h3>
-            				<p>{content}</p>
-            			</th><th class="expander"></th></tr></table>
-            			<p>You have received this email because you have subscribed to various email options within the following support groups: <strong>{tag.list}</strong>.</p>
+            				<h3>{user2.username}</h3>
+            				<table class="button secondary radius btn-offset"><tr><td><table><tr><td><a href="{user2.url}">View Profile</a></td></tr></table></td></tr></table>
+                  </th><th class="expander"></th></tr></table>
+                  <p>Friend back? <a href="{user.url-friend}">add {user2.username}</a> to your list of friends!</p>
+                  <hr>
             			<p class="text-muted">Kind regards,<br>
             			The {project.name} Team</p>
             		</th>
