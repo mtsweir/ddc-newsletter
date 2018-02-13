@@ -1,5 +1,5 @@
 ---
-subject: Drugs.com Answers Community - New Comment
+subject: Drugs.com Answers Community - New Private Message
 ---
 
 {{> header-secondary }}
@@ -26,14 +26,14 @@ subject: Drugs.com Answers Community - New Comment
 		<columns small="12">
 			<spacer size="32"></spacer>
 			<p>Hi {user.username},</p>
-			<p class="text-muted">You have a new reply after one of your comments on the question:</p>
-			<h3>{post.title}</h3>
+			<p class="text-muted">Your question has been posted on {project.name}. Note that response time will vary depending on the difficulty of your question and the availability of other members. Please be patient and do not post your question more than once. You will be notified by email when someone answers your question.</p>
 			<spacer size="8"></spacer>
 			<callout class="success">
-				<p><strong>{user2.username}</strong> said...</p>
-				<p>{comment.text.short}</p>
-				<button href="{post.url.short}" class="secondary radius btn-offset">View Reply</button>
-			</callout>
+				<h3>{post.title}</h3>
+				<button href="{post.url.short}" class="secondary radius btn-offset">View Question</button>
+      </callout>
+      <p><a href="{post.url-additional}">Click here</a> if you need to add further information or details to your question.</p>
+      <hr>
 			<p class="text-muted">Kind regards,<br>
 			The {project.name} Team</p>
 		</columns>

@@ -26,14 +26,14 @@ subject: Drugs.com Answers Community - New Comment
 		<columns small="12">
 			<spacer size="32"></spacer>
 			<p>Hi {user.username},</p>
-			<p class="text-muted">You have a new reply after one of your comments on the question:</p>
-			<h3>{post.title}</h3>
+			<p class="text-muted">You have been added to a friends list:</p>
 			<spacer size="8"></spacer>
 			<callout class="success">
-				<p><strong>{user2.username}</strong> said...</p>
-				<p>{comment.text.short}</p>
-				<button href="{post.url.short}" class="secondary radius btn-offset">View Reply</button>
-			</callout>
+				<h3>{user2.username}</h3>
+				<button href="{user2.url}" class="secondary radius btn-offset">View Profile</button>
+      </callout>
+      <p>Friend back? <a href="{user.url-friend}">add {user2.username}</a> to your list of friends!</p>
+      <hr>
 			<p class="text-muted">Kind regards,<br>
 			The {project.name} Team</p>
 		</columns>
