@@ -24,18 +24,22 @@ subject: Drugs.com Answers Community - New Private Message
 
 	<row>
 		<columns small="12">
-			<spacer size="32"></spacer>
-			<p>Hi {user.username},</p>
-			<p class="text-muted">Your friend {post.username} has replied to a private question:</p>
+			<h2>Hi {user.username},</h2>
+			<p class="text-muted">Your friend <strong>{post.username}</strong> has replied to a private question:</p>
 			<spacer size="8"></spacer>
 			<callout class="success">
-				<h3>{post.title}</h3>
-				<button href="{post.url.short}" class="secondary radius btn-offset">View Reply</button>
+				<h4>{post.title}</h4>
+				<center>
+					<button href="{post.url.short}" class="secondary radius btn-offset">View Reply</button>
+				</center>
 			</callout>
+			<spacer size="24"></spacer>
 			<p class="text-muted">Kind regards,<br>
 			The {project.name} Team</p>
 		</columns>
 	</row>
+
+	{{> sponsored }}
 
 </container>
 

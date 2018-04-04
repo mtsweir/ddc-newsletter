@@ -24,13 +24,14 @@ subject: Drugs.com Answers Community - New Answer
 
 	<row>
 		<columns small="12">
-			<spacer size="32"></spacer>
-			<p>Hi {user.username},</p>
+			<h2>Hi {user.username},</h2>
 			<p class="text-muted"><a href="{user2.url}">{user2.username}</a> just posted a new answer on a question in the <strong>{tag.name}</strong> support group:</p>
 			<spacer size="8"></spacer>
 			<callout class="success">
 				<h3>{post.title}</h3>
-				<button href="{post.url.short}" class="secondary radius btn-offset">View Answers</button>
+				<center>
+					<button href="{post.url.short}" class="secondary radius btn-offset">View Answer</button>
+				</center>
 			</callout>
 			<p>View more <a href="{tag.url}">{tag.name}</a> questions &amp; answers.</p>
 			<hr>
@@ -39,6 +40,8 @@ subject: Drugs.com Answers Community - New Answer
 			The {project.name} Team</p>
 		</columns>
 	</row>
+
+	{{> sponsored }}
 
 </container>
 

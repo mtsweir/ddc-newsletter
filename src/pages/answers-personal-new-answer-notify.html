@@ -24,18 +24,22 @@ subject: Drugs.com Answers Community - New Answer Notification
 
 	<row>
 		<columns small="12">
-			<spacer size="32"></spacer>
-			<p>Hi {user.username},</p>
+			<h2>Hi {user.username},</h2>
 			<p class="text-muted"><a href="{user2.url}">{user2.username}</a> has posted a new answer on a question you are interested in:</p>
 			<spacer size="8"></spacer>
 			<callout class="success">
-				<h3>{post.title}</h3>
-				<button href="{post.url.short}" class="secondary radius btn-offset">View Answers</button>
+				<h4>{post.title}</h4>
+				<center>
+					<button href="{post.url.short}" class="secondary radius btn-offset">View Answer</button>
+				</center>
 			</callout>
+			<spacer size="24"></spacer>
 			<p class="text-muted">Kind regards,<br>
 			The {project.name} Team</p>
 		</columns>
 	</row>
+
+	{{> sponsored }}
 
 </container>
 

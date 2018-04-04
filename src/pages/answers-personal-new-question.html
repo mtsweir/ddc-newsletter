@@ -24,20 +24,24 @@ subject: Drugs.com Answers Community - New Private Message
 
 	<row>
 		<columns small="12">
-			<spacer size="32"></spacer>
-			<p>Hi {user.username},</p>
-			<p class="text-muted">Your question has been posted on {project.name}. Note that response time will vary depending on the difficulty of your question and the availability of other members. Please be patient and do not post your question more than once. You will be notified by email when someone answers your question.</p>
+			<h2>Hi {user.username},</h2>
+			<p class="text-muted">Your question has been posted on {project.name}.</p>
 			<spacer size="8"></spacer>
 			<callout class="success">
-				<h3>{post.title}</h3>
-				<button href="{post.url.short}" class="secondary radius btn-offset">View Question</button>
-      </callout>
+				<h4>{post.title}</h4>
+				<center>
+					<button href="{post.url.short}" class="secondary radius btn-offset">View Question</button>
+				</center>
+			</callout>
+			<p>Note that response time will vary depending on the difficulty of your question and the availability of other members. Please be patient and do not post your question more than once. You will be notified by email when someone answers your question.</p>
       <p><a href="{post.url-additional}">Click here</a> if you need to add further information or details to your question.</p>
       <hr>
 			<p class="text-muted">Kind regards,<br>
 			The {project.name} Team</p>
 		</columns>
 	</row>
+
+	{{> sponsored }}
 
 </container>
 

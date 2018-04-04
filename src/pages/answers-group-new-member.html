@@ -24,21 +24,24 @@ subject: Drugs.com Answers Community - New Member
 
 	<row>
 		<columns small="12">
-			<spacer size="32"></spacer>
-			<p>Hi {user.username},</p>
+			<h2>Hi {user.username},</h2>
 			<p class="text-muted">A new member has joined the <strong>{tag.name}</strong> support group:</p>
 			<spacer size="8"></spacer>
 			<callout class="success">
-				<h3>{user2.username}</h3>
-				<button href="{user2.url}" class="secondary radius btn-offset">View Profile</button>
+				<h4>{user2.username}</h4>
+				<center>
+					<button href="{user2.url}" class="secondary radius btn-offset">View Profile</button>
+				</center>
 			</callout>
-			<p>View all <a href="{tag.member-url}">members</a> of the {tag.name} support group.</p>
+			<p>View all <a href="{tag.member-url}">members</a> of the <strong>{tag.name}</strong> support group.</p>
 			<hr>
 			<spacer size="24"></spacer>
 			<p class="text-muted">Kind regards,<br>
 			The {project.name} Team</p>
 		</columns>
 	</row>
+
+	{{> sponsored }}
 
 </container>
 

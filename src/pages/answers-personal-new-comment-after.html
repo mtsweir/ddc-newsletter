@@ -24,20 +24,26 @@ subject: Drugs.com Answers Community - New Comment
 
 	<row>
 		<columns small="12">
-			<spacer size="32"></spacer>
-			<p>Hi {user.username},</p>
-			<p class="text-muted">You have a new reply after one of your comments on the question:</p>
-			<h3>{post.title}</h3>
-			<spacer size="8"></spacer>
+			<h2>Hi {user.username},</h2>
+			<p class="text-muted">You have a new reply after one of your comments:</p>
+			<hr>
+			<h4><span class="text-muted">Q:</span> {post.title}</h4>
+			<spacer size="24"></spacer>
 			<callout class="success">
-				<p><strong>{user2.username}</strong> said...</p>
-				<p>{comment.text.short}</p>
-				<button href="{post.url.short}" class="secondary radius btn-offset">View Reply</button>
+				<span><strong>{user2.username}</strong> said...</span>
+				<spacer size="8"></spacer>
+				<p>&ldquo;{comment.text.short}&rdquo;</p>
+				<center>
+					<button href="{post.url.short}" class="secondary radius btn-offset">View Reply</button>
+				</center>
 			</callout>
+			<spacer size="24"></spacer>
 			<p class="text-muted">Kind regards,<br>
 			The {project.name} Team</p>
 		</columns>
 	</row>
+
+	{{> sponsored }}
 
 </container>
 
