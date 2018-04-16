@@ -1,5 +1,5 @@
 ---
-subject: Drugs.com Answers Community - New Member
+subject: A new member joined the {tag.name} Support Group - Drugs.com Answers Community
 ---
 
 {{> header-secondary }}
@@ -8,12 +8,12 @@ subject: Drugs.com Answers Community - New Member
 	<container>
 		<row class="collapse">
 			<columns small="12" large="6" valign="middle">
-				<img class="logo logo-ddc small-float-center" src="https://blog.drugs.com/wp-content/uploads/2018/02/logo-ddc.jpg" width="211" height="44" alt="Drugs.com">
+				<img class="logo logo-ddc small-float-center" src="https://www.drugs.com/newsletters/src/logo-ddc.jpg" width="211" height="44" alt="Drugs.com">
 			</columns>
 			<columns small="12" large="6">
 				<p class="small-text-center text-right" valign="middle">
 					<span class="header-title">Answers Community</span><br>
-					<span class="header-sub-title">December 19, 2017</span>
+					<span class="header-sub-title">{F jS, Y}</span>
 				</p>
 			</columns>
 		</row>
@@ -21,28 +21,28 @@ subject: Drugs.com Answers Community - New Member
 </wrapper>
 
 <container>
-
 	<row>
 		<columns small="12">
+
 			<h2>Hi {user.username},</h2>
 			<p class="text-muted">A new member has joined the <strong>{tag.name}</strong> support group:</p>
 			<spacer size="8"></spacer>
-			<callout class="success">
+
+			<callout class="success radius">
 				<h4>{user2.username}</h4>
 				<center>
 					<button href="{user2.url}" class="secondary radius btn-offset">View Profile</button>
 				</center>
 			</callout>
+
 			<p>View all <a href="{tag.member-url}">members</a> of the <strong>{tag.name}</strong> support group.</p>
 			<hr>
-			<spacer size="24"></spacer>
+
 			<p class="text-muted">Kind regards,<br>
 			The {project.name} Team</p>
+
 		</columns>
 	</row>
-
-	{{> sponsored }}
-
 </container>
 
 {{> footer-notifications }}

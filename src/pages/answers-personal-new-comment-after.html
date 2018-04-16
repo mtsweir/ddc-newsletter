@@ -1,5 +1,5 @@
 ---
-subject: Drugs.com Answers Community - New Comment
+subject: New Reply after your Comment - Drugs.com Answers Community
 ---
 
 {{> header-secondary }}
@@ -8,12 +8,12 @@ subject: Drugs.com Answers Community - New Comment
 	<container>
 		<row class="collapse">
 			<columns small="12" large="6" valign="middle">
-				<img class="logo logo-ddc small-float-center" src="https://blog.drugs.com/wp-content/uploads/2018/02/logo-ddc.jpg" width="211" height="44" alt="Drugs.com">
+				<img class="logo logo-ddc small-float-center" src="https://www.drugs.com/newsletters/src/logo-ddc.jpg" width="211" height="44" alt="Drugs.com">
 			</columns>
 			<columns small="12" large="6">
 				<p class="small-text-center text-right" valign="middle">
 					<span class="header-title">Answers Community</span><br>
-					<span class="header-sub-title">December 19, 2017</span>
+					<span class="header-sub-title">{F jS, Y}</span>
 				</p>
 			</columns>
 		</row>
@@ -21,15 +21,16 @@ subject: Drugs.com Answers Community - New Comment
 </wrapper>
 
 <container>
-
 	<row>
 		<columns small="12">
+
 			<h2>Hi {user.username},</h2>
 			<p class="text-muted">You have a new reply after one of your comments:</p>
-			<hr>
-			<h4><span class="text-muted">Q:</span> {post.title}</h4>
-			<spacer size="24"></spacer>
-			<callout class="success">
+			<spacer size="8"></spacer>
+
+			<callout class="success radius">
+				<h4><span class="text-muted">Q:</span> {post.title}</h4>
+				<hr style="border-color:#d5d5d5 !important; margin-bottom:16px !important;">
 				<span><strong>{user2.username}</strong> said...</span>
 				<spacer size="8"></spacer>
 				<p>&ldquo;{comment.text.short}&rdquo;</p>
@@ -37,14 +38,12 @@ subject: Drugs.com Answers Community - New Comment
 					<button href="{post.url.short}" class="secondary radius btn-offset">View Reply</button>
 				</center>
 			</callout>
-			<spacer size="24"></spacer>
+
 			<p class="text-muted">Kind regards,<br>
 			The {project.name} Team</p>
+
 		</columns>
 	</row>
-
-	{{> sponsored }}
-
 </container>
 
 {{> footer-notifications }}

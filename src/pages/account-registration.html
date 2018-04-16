@@ -5,36 +5,34 @@ subject: Welcome to Drugs.com
 <wrapper class="header header-primary">
 	<container>
 		<row class="collapse">
-			<columns small="12" large="6" valign="middle">
-				<img class="logo logo-ddc small-float-center" src="https://blog.drugs.com/wp-content/uploads/2018/02/logo-ddc.jpg" width="211" height="44" alt="Drugs.com">
-			</columns>
-			<columns small="12" large="6">
-				<p class="small-text-center text-right" valign="middle">
-					<span class="header-title">Account Support</span><br>
-					<span class="header-sub-title">April 27, 2017</span>
-				</p>
+			<columns small="12" valign="middle">
+				<center>
+					<img class="logo logo-ddc small-float-center" src="https://www.drugs.com/newsletters/src/logo-ddc.jpg" width="211" height="44" alt="Drugs.com" style="margin-bottom:0 !important;">
+				</center>
 			</columns>
 		</row>
 	</container>
 </wrapper>
 
 <container>
-
 	<row>
 		<columns small="12">
-			<h2>Welcome Zarkon,</h2>
-			<p>Thank you for registering! Please verify your new Drugs.com account by clicking on this link:</p>
+
+			<h2>Welcome {user.username},</h2>
+			<p>Thank you for registering! Please verify your new Drugs.com account by clicking the link below:</p>
+
 			<center>
 				<button href="#" class="radius btn-offset">Complete Registration</button>
 			</center>
 			<p class="text-center text-muted">Or try using: <a href="#">https://www.drugs.com/account/register/?a=act&u=1685644&i=834078ca98c7251498d4b0693414a8b5</a></p>
+
 			<hr>
 			<p class="text-muted">Please note, certain functionality, such as posting questions to our forum, will not be accessible until verification is complete.</p>
 			<p class="text-muted">Regards,<br>
-			Drugs.com Support Team</p>
+			{project.name} Support Team</p>
+
 		</columns>
 	</row>
-
 </container>
 
 {{> footer-notifications-secondary }}

@@ -1,5 +1,5 @@
 ---
-subject: Drugs.com Answers Community - New Private Message
+subject: New Private Message - Drugs.com Answers Community
 ---
 
 {{> header-secondary }}
@@ -8,12 +8,12 @@ subject: Drugs.com Answers Community - New Private Message
 	<container>
 		<row class="collapse">
 			<columns small="12" large="6" valign="middle">
-				<img class="logo logo-ddc small-float-center" src="https://blog.drugs.com/wp-content/uploads/2018/02/logo-ddc.jpg" width="211" height="44" alt="Drugs.com">
+				<img class="logo logo-ddc small-float-center" src="https://www.drugs.com/newsletters/src/logo-ddc.jpg" width="211" height="44" alt="Drugs.com">
 			</columns>
 			<columns small="12" large="6">
 				<p class="small-text-center text-right" valign="middle">
 					<span class="header-title">Answers Community</span><br>
-					<span class="header-sub-title">December 19, 2017</span>
+					<span class="header-sub-title">{F jS, Y}</span>
 				</p>
 			</columns>
 		</row>
@@ -21,26 +21,25 @@ subject: Drugs.com Answers Community - New Private Message
 </wrapper>
 
 <container>
-
 	<row>
 		<columns small="12">
+
 			<h2>Hi {user.username},</h2>
-			<p class="text-muted">Your friend {post.username} has asked a private question for you:</p>
+			<p class="text-muted">Your friend {post.username} asked a private question:</p>
 			<spacer size="8"></spacer>
-			<callout class="success">
+
+			<callout class="success radius">
 				<h4>{post.title}</h4>
 				<center>
 					<button href="{post.url.short}" class="secondary radius btn-offset">View Question</button>
 				</center>
 			</callout>
-			<spacer size="24"></spacer>
+
 			<p class="text-muted">Kind regards,<br>
 			The {project.name} Team</p>
+
 		</columns>
 	</row>
-
-	{{> sponsored }}
-
 </container>
 
 {{> footer-notifications }}
