@@ -19,7 +19,9 @@
 // Spacer
 $spacer: 16px;
 
-// DDC Brand Colours
+// DDC Colours
+$ddc-blue: #259cd8;
+
 $shade-1: #242424;
 $shade-2: #484848;
 $shade-3: #727272;
@@ -27,10 +29,12 @@ $shade-4: #d5d5d5;
 $shade-5: #e7e7e7;
 $shade-6: #f3f3f3;
 $shade-7: #f8f8f8;
+
+$color-link: #2270ee;
 $fda-primary: #007cbe;
 
 // Base Colours
-$primary-color: #259cd8;
+$primary-color: $ddc-blue;
 $secondary-color: #27baa4;
 $success-color: #3adb76;
 $warning-color: #ffae00;
@@ -105,9 +109,9 @@ $hr-width: $global-width;
 $hr-border: 1px solid $shade-5;
 $hr-margin: 20px auto;
 $anchor-text-decoration: none;
-$anchor-color: $primary-color;
-$anchor-color-visited: $anchor-color;
-$anchor-color-hover: darken($primary-color, 20%);
+$anchor-color: $color-link;
+$anchor-color-visited: $color-link;
+$anchor-color-hover: darken($color-link, 20%);
 $anchor-color-active: $anchor-color-hover;
 $stat-font-size: 40px;
 
@@ -153,7 +157,7 @@ $callout-border-alert: 1px solid darken($alert-color, 20%);
 
 $menu-item-padding: 10px;
 $menu-item-gutter: 10px;
-$menu-item-color: $primary-color;
+$menu-item-color: $color-link;
 
 // 8. Thumbnail
 // ------------
