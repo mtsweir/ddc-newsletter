@@ -21,6 +21,7 @@ $spacer: 16px;
 
 // DDC Colours
 $ddc-blue: #259cd8;
+$ddc-teal: #27baa4;
 
 $shade-1: #242424;
 $shade-2: #484848;
@@ -35,7 +36,7 @@ $fda-primary: #007cbe;
 
 // Base Colours
 $primary-color: $ddc-blue;
-$secondary-color: #27baa4;
+$secondary-color: $ddc-teal;
 $success-color: #3adb76;
 $warning-color: #ffae00;
 $alert-color: #ec5840;
