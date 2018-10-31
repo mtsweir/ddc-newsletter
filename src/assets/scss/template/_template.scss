@@ -253,9 +253,14 @@ table.body .reminder {
 
 // Buttons
 
-// Button control
+// Control custom buttons
 
-.btn-control {
+.btn-control-social {
+	width: 30px !important;
+	height: 30px !important;
+}
+
+.btn-control-app {
 	height: 40px !important;
 }
 
@@ -277,7 +282,6 @@ table.body .reminder {
 	margin-bottom: 10px !important;
 }
 
-
 // Callout
 
 .sponsored .callout {
@@ -285,8 +289,8 @@ table.body .reminder {
 }
 
 .sponsored .callout-inner {
-	padding-bottom: 10px !important;
-	background: $shade-6 !important;
+	padding: 0 !important;
+	background: $white !important;
 }
 
 .callout-inner {
@@ -387,6 +391,10 @@ th.callout-inner.success {
 	background: $white;
 }
 
+table.footer-nav-social th.menu-item {
+	padding: 10px !important;
+}
+
 
 // 8. Vendor
 // ==========================================================================
@@ -442,12 +450,6 @@ th.callout-inner.success {
 }
 
 @media only screen and (min-width: #{$global-breakpoint}) {
-
-	// match global padding for large
-	.sponsored .primary {
-		padding-left: 50px !important;
-		padding-right: 50px !important;
-	}
 
 	// Row dual column reset
 	// Removes padding on specific columns, applies to large screens only
